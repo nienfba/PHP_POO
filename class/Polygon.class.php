@@ -13,7 +13,7 @@ class Polygon extends Form2D
      */
     public function __construct()
     {
-        $this->points = array();
+        parent::__construct();
     }
 
     /** Ajoute un point au Polygone
@@ -23,6 +23,8 @@ class Polygon extends Form2D
      */
     public function addPoint($x,$y)
     {
+        if(!is_array($this->points))
+             $this->points = [];
         $this->points[] = new Point($x,$y);
 
         return $this;
@@ -41,7 +43,7 @@ class Polygon extends Form2D
             if(next($this->points))
                 $svg.=',';
         }
-        $svg.= '"></polygon>';
+        $svg.= '" />';
         
         return $svg;
     }

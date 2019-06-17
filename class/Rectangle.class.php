@@ -38,7 +38,7 @@ class Rectangle extends Form2D
      *
      * @return  integer
      */ 
-    public function getLargeur()
+    public function getWidth()
     {
         return $this->width;
     }
@@ -46,11 +46,11 @@ class Rectangle extends Form2D
     /**
      * Set largeur du rectancle
      *
-     * @param  integer  $largeur  largeur du rectancle
+     * @param  integer  $width  largeur du rectancle
      *
      * @return  self
      */ 
-    public function setLargeur($width)
+    public function setWidth($width)
     {
         $this->width = $width;
 
@@ -62,7 +62,7 @@ class Rectangle extends Form2D
      *
      * @return  integer
      */ 
-    public function getHauteur()
+    public function getHeight()
     {
         return $this->height;
     }
@@ -70,11 +70,11 @@ class Rectangle extends Form2D
     /**
      * Set hauteur du rectancle
      *
-     * @param  integer  $hauteur  hauteur du rectancle
+     * @param  integer  $height  hauteur du rectancle
      *
      * @return  self
      */ 
-    public function setHauteur($height)
+    public function setHeight($height)
     {
         $this->height = $height;
 

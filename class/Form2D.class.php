@@ -51,10 +51,11 @@ abstract class Form2D
      */ 
 	public function __construct()
 	{
-		$this->setColor('black');
+        $this->setColor('white');
+        $this->setColorStroke('black');
         $this->setLocation(0,0);
         $this->setOpacity(1);
-        $this->setWidthStroke(0);
+        $this->setWidthStroke(1);
         $this->setOpacityStroke(1);
     }
     
@@ -65,7 +66,7 @@ abstract class Form2D
      */
     public function getStyleSvg()
     {
-        return 'style="fill:'.$this->color.';stroke:'.$this->colorStroke.';stroke-width:'.$this->widthStroke.';fill-opacity:'.$this->opacity.';stroke-opacity:'.$this->opacityStroke.'"';
+        return 'style="fill:'.$this->getColor().';stroke:'.$this->getColorStroke().';stroke-width:'.$this->getWidthStroke().';fill-opacity:'.$this->getOpacity().';stroke-opacity:'.$this->getOpacityStroke().'"';
     }
 
     /**
@@ -79,9 +80,9 @@ abstract class Form2D
     }
 
     /**
-     * Set chaine exadecimal de couleur ex: #FFEE22
+     * Set chaine hexadecimal de couleur ex: #FFEE22
      *
-     * @param  string  $color  chaine exadecimal de couleur ex: #FFEE22
+     * @param  string  $color  chaine hexadecimal de couleur ex: #FFEE22
      *
      * @return  self
      */ 
@@ -93,7 +94,7 @@ abstract class Form2D
     }
 
     /**
-     * Get chaine exadecimal de couleur ex: #FFEE22
+     * Get chaine hexadecimal de couleur ex: #FFEE22
      *
      * @return  string
      */ 
@@ -103,9 +104,9 @@ abstract class Form2D
     }
 
     /**
-     * Set chaine exadecimal de couleur ex: #FFEE22
+     * Set chaine hexadecimal de couleur ex: #FFEE22
      *
-     * @param  string  $colorStroke  chaine exadecimal de couleur ex: #FFEE22
+     * @param  string  $colorStroke  chaine hexadecimal de couleur ex: #FFEE22
      *
      * @return  self
      */ 

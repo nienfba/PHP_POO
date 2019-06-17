@@ -24,6 +24,7 @@ class Line extends Form2D
     {
         $this->setStartPoint($x, $y);
         $this->setEndPoint($x2, $y2);
+        parent::__construct();
     }
 
       /** Dessine une balise SVG pour une ligne
@@ -32,7 +33,7 @@ class Line extends Form2D
      */
     public function draw()
     {
-        return '<line '.$this->getStyleSvg().' x1="'.$this->getStartPoint()->getX().'" y1="'.$this->getStartPoint()->getY().'" x2="'.$this->getEndPoint()->getX().'" y2="'.$this->getEndPoint()->getY().'" >';
+        return '<line '.$this->getStyleSvg().' x1="'.$this->getStartPoint()->getX().'" y1="'.$this->getStartPoint()->getY().'" x2="'.$this->getEndPoint()->getX().'" y2="'.$this->getEndPoint()->getY().'" />';
     }
 
 

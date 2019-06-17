@@ -34,8 +34,8 @@ $paint->addForm($rectangle)->addForm($rectangle2)->addForm($ellipse1)->addForm($
 /** Forme les reliques de la mort */
 $relique1 = new Triangle(500,10,420,140,580,140);
 $relique1->setColor('#FFFFFF')->setWidthStroke(1)->setColorStroke('#000000')->setOpacity(0);
-$relique2 = new Line(420, 140, 500, 140);
-$relique2->setColor('#FFFFFF')->setWidthStroke(1)->setColorStroke('#000000')->setOpacity(1);
+$relique2 = new Line(500, 10, 500, 140);
+$relique2->setWidthStroke(1)->setColorStroke('#000000')->setOpacity(1);
 $relique3 = new Circle(44);
 $relique3->setLocation(500,95)->setColor('#FFFFFF')->setWidthStroke(1)->setColorStroke('#000000')->setOpacity(0);
 $paint->addForm($relique1)->addForm($relique2)->addForm($relique3);

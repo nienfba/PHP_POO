@@ -7,6 +7,7 @@ class Triangle extends Polygon
         $this->addPoint($x,$y);
         $this->addPoint($x2,$y2);
         $this->addPoint($x3,$y3);
+        parent::__construct();
     }
 
 }

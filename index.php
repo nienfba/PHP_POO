@@ -1,4 +1,7 @@
 <?php
+/** LE fichier bootStrap est le secteur d'amorce de notre application.
+ * Il comporte les fonctions génériques qui seront appelées à l'appel de notre programme
+ */
 include('lib/bootstrap.lib.php');
 
 /** On créé une première forme */
@@ -28,7 +31,7 @@ $triangle->setColor('#EEEEEE')->setWidthStroke(2)->setColorStroke('#DDDDDD')->se
 /** On appel notre class PaintVector qui va recevoir les objet Form2D et ensuite générer une chaine SVG 
  * La méthode addForm peut-être chainée car elle retourne une instance de l'objet
 */
-$paint = new PaintVector(800,600);
+$paint = new PaintVector(800,1000);
 $paint->addForm($rectangle)->addForm($rectangle2)->addForm($ellipse1)->addForm($circle)->addForm($triangle);
 
 /** Forme les reliques de la mort */
@@ -47,9 +50,19 @@ $poly->setColor('#Df4565')->setWidthStroke(1)->setColorStroke('#000000')->setOpa
 $paint->addForm($poly);
 
 /** Ligne */
-$line = new Line(50,50, 300,300);
+$line = new Line(50,50,300,300);
 $line->setColor('#123432')->setWidthStroke(2)->setColorStroke('#DD3322')->setOpacity(1);
 $paint->addForm($line);
+
+/** Mickey */
+$mickey1 = new Circle(100);
+$mickey1->setLocation(200,600)->setColorStroke('#000000')->setColor('#000000');
+$mickey2 = new Circle(100);
+$mickey2->setLocation(500, 600)->setColorStroke('#000000')->setColor('#000000');
+$mickey3 = new Circle(200);
+$mickey3->setLocation(350, 800)->setColorStroke('#000000')->setColor('#000000');
+$paint->addForm($mickey1)->addForm($mickey2)->addForm($mickey3);
+
 
 /** On appel la méthode de rendu qui nous retourne une chaine de caractère correspondant à du SVG */
 $svg = $paint->render();

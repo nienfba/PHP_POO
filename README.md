@@ -16,3 +16,4 @@ Pour modifier ou ajouter des formes modifiez la création des formes dans le fic
 * composition : un objet possède une propriété représentant un autre objet ('a un') ou plusieurs objets (collection, 'a des'),
 * polymorphisme : généricité d'une forme, elle peut être dessinée en SVG, on peut donc créer de nouvelles formes (une ligne, un polygone complexe) en respectant la hiérarchie et notre programme saura la dessiner !
 * chaînage des méthodes (return self ($this) dans les setters et autres méthodes add)
+* autoload de classes

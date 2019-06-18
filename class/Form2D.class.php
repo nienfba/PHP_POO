@@ -28,7 +28,7 @@ abstract class Form2D
     protected $opacityStroke;
 
      /**
-     * @var integer largeur du trait de contour entr e 1 et n
+     * @var int largeur du trait de contour entr e 1 et n
      */
     protected $widthStroke;
 
